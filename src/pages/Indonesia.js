@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-//import NumberFormat from 'react-number-format';
+import NumberFormat from 'react-number-format';
 import axios from "axios"
 import '../App.css'
 
@@ -14,8 +14,7 @@ const Indonesia = () => {
             .then((response) => {
                 setTerkena(response.data.perawatan);
                 setDie(response.data.meninggal);
-                setPulih(response.data.sembuh
-                    );
+                setPulih(response.data.sembuh);
             })
     }, []);
 
@@ -28,7 +27,9 @@ const Indonesia = () => {
             <br></br>
             <h1 className="boxpositif">Positif {terkena}</h1> 
             <h1 className="boxmeninggal">Meninggal {die}</h1>
+
             <h1 className="boxsembuh">Sembuh {pulih}</h1>
+          
 {/* 
             <h1 className ="boxmeninggal">Meninggal <NumberFormat value={die} thousandSeparator={true} displayType={'text'}/></h1> 
              <h1 className ="boxsembuh">Sembuh <NumberFormat value={pulih} thousandSeparator={true} displayType={'text'}/></h1>
