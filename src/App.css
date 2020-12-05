@@ -39,7 +39,7 @@
 
 .boxpositif {
   height: 100px;
-  width: 200px;
+  width: 190px;
   border-radius: 15px;
   margin-left: 30px;
   display:inline-block;
@@ -54,7 +54,7 @@
 }
 .boxsembuh {
   height: 100px;
-  width: 200px;
+  width: 190px;
   border-radius: 15px;
   margin-left: 30px;
   display:inline-block;
@@ -62,7 +62,7 @@
   text-align:  'center';
   border-radius: 10px;
     border-width :5px;
-    border-color:pink;
+    border-color:black;
     border-style: solid;
     font-weight: bold;
     background-color:rgb(52, 207, 111)
@@ -70,7 +70,7 @@
 
 .boxmeninggal{
   height: 100px;
-  width: 200px;
+  width: 190px;
   border-radius: 15px;
   margin-left: 30px;
   display:inline-block;
@@ -78,7 +78,7 @@
   text-align:  'center';
   border-radius: 10px;
     border-width: 5px;
-    border-color: cornflowerblue;
+    border-color: black;
     border-style: solid;
     font-weight: bold;
     background-color:rgb(224, 47, 247)

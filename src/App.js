@@ -29,32 +29,34 @@
 import React from 'react'
 import './App.css'
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
-import { Global,Indonesia,Provinsi,provinsi } from './pages'
+import { Global,Indonesia,Provinsi} from './pages'
 
 
 const App = () =>{
     return (
+        <center>
         <Router>
+            
             <div>
               <h1> Covid Tracker</h1>
                 <nav>
-                    <ul>
-                        <li>
+                    
+                        <tr>
                             <Link to="/Global">
                                 Global
                             </Link>
-                        </li>
-                        <li>
+                        </tr>
+                        <tr>
                             <Link to="/Indonesia">
                                 Indonesia
                             </Link>
-                        </li>
-                        <th>
+                        </tr>
+                        <tr>
                             <Link to="/Provinsi">
                                 Provinsi
                             </Link>
-                        </th>
-                    </ul>
+                        </tr>
+                
                 </nav>
             </div>
             <Switch>
@@ -69,6 +71,7 @@ const App = () =>{
                 </Route>
             </Switch>
         </Router>
+        </center>
     )
 }
 
