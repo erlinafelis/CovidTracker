@@ -14,22 +14,22 @@ export default function Provinsi (){
     console.log(provinsiData)
     return(
         <div align="center">
-            <table border="1" className="table-container">
+            <table border="3" className="table covid">
                 <tr>
-                    <th className="table-value-first">Nomor</th>
-                    <th className="table-value-second">Provinsi</th>
-                    <th className="table-value-third">Positif covid</th>
-                    <th className="table-value-fourth">Sembuh</th>
-                    <th className="table-value-fifth">Meninggal</th>
+                    <td className="table1">No</td>
+                    <td className="table2">Provinsi</td>
+                    <td className="table3">Positif </td>
+                    <td className="table4">Sembuh</td>
+                    <td className="table5">Meninggal</td>
                 </tr>
                 {provinsiData.map((item, index) => {
                     return(
                         <tr>
-                            <th className="table-value-first"scope="row" key={item.fid}>{index + 1}</th>
-                            <th className="table-value-second">{item.provinsi}</th>
-                            <th className="table-value-third"><NumberFormat value={item.kasusPosi} thousandSeparator={true} displayType={'text'}/></th>
-                            <th className="table-value-fourth"><NumberFormat value={item.kasusSemb} thousandSeparator={true} displayType={'text'}/></th>
-                            <th className="table-value-fifth"><NumberFormat value={item.kasusMeni} thousandSeparator={true} displayType={'text'}/></th>
+                            <th className="table1"scope="row" key={item.fid}>{index + 1}</th>
+                            <td className="table2">{item.provinsi}</td>
+                            <td className="table3"><NumberFormat value={item.kasusPosi} thousandSeparator={true} displayType={'text'}/></td>
+                            <td className="table4"><NumberFormat value={item.kasusSemb} thousandSeparator={true} displayType={'text'}/></td>
+                            <td className="table5"><NumberFormat value={item.kasusMeni} thousandSeparator={true} displayType={'text'}/></td>
                         </tr>
                     )
                 })}
