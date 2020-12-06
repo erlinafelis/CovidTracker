@@ -12,10 +12,11 @@ const Indonesia = () => {
         axios
             .get("https://indonesia-covid-19.mathdro.id/api")
             .then((response) => {
-                setTerkena(response.data.perawatan);
-                setDie(response.data.meninggal);
-                setPulih(response.data.sembuh);
+                setTerkena(response.data.perawatan.value);
+                setDie(response.data.meninggal.value);
+                setPulih(response.data.sembuh.value);
             })
+            .catch(err => (console.log(err)))
     }, []);
 
 
@@ -25,15 +26,14 @@ const Indonesia = () => {
         <div>
             <b>Jumlah kasus di indonesia</b>
             <br></br>
-            <h1 className="boxpositif">Positif {terkena}</h1> 
+            {/* <h1 className="boxpositif">Positif {terkena}</h1> 
             <h1 className="boxmeninggal">Meninggal {die}</h1>
-
-            <h1 className="boxsembuh">Sembuh {pulih}</h1>
+           <h1 className="boxsembuh">Sembuh {pulih}</h1> */}
           
-{/* 
+
             <h1 className ="boxmeninggal">Meninggal <NumberFormat value={die} thousandSeparator={true} displayType={'text'}/></h1> 
              <h1 className ="boxsembuh">Sembuh <NumberFormat value={pulih} thousandSeparator={true} displayType={'text'}/></h1>
-             <h1 className ="boxpositif">positif <NumberFormat value={terkena} thousandSeparator={true} displayType={'text'}/></h1>  */}
+             <h1 className ="boxpositif">positif <NumberFormat value={terkena} thousandSeparator={true} displayType={'text'}/></h1> 
         </div>
 
     )
