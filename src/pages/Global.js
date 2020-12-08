@@ -30,7 +30,7 @@ import NumberFormat from "react-number-format"
              <h1 className ="boxmeninggal">Meninggal <NumberFormat value={Meninggal} thousandSeparator={true} displayType={'text'}/></h1>
              <h1 className ="boxsembuh">Sembuh <NumberFormat value={Sembuh} thousandSeparator={true} displayType={'text'}/></h1>
              
-             
+            
          </div>
      )
  }
